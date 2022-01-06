@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link type="image/jpg" rel="icon" href="./public/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function scoreHandler(){
+            alert("ONCHANGE was fired")
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="flex-container">
+        <section class="left">
+            <h1 id="brand-name">Rock Paper Scissors</h1>
+        </section>
+        <section class="right">
+            <a id="home" href="./index.html" title="Home"> Home </a>
+            <a id="about" href="./about.html" title="About"> About </a>
+            <a id="contact" href="./contact.html" title="Contact"> Contact </a>
+
+        </section>
+    </nav>
+
+    <!-- main part starts -->
+    <main class="main">
+        <div id="rock">
+            <img class="choice" src="./public/rock.jpg" alt="Rock" width="315" height="315">
+        </div>
+        <div id="paper">
+            <img class="choice" src="./public/paper.jpg" alt="Paper" width="315" height="315">
+        </div>
+        <div id="scissors">
+            <img class="choice" src="./public/scissors.jpg" alt="Scissors" width="315" height="315">
+        </div>
+    </main>
+    <!-- main part ends -->
+
+    <!-- score section starts -->
+    <div class="score-section">
+        <div>
+            <span id="heading1">You chose: </span><h6 id="user-choice"></h6>
+            <span>Your Score: </span><p id="user-score" onchange="scoreHandler();">0</p>
+        </div>
+        <div >
+            <span id="heading2">Computer chose: </span><h6 id="computer-choice"></h6>
+            <span>Computer's Score: </span><p id="computer-score" onchange="scoreHandler();">0</p>
+        </div>
+    </div>
+    <!-- score section ends -->
+    <script>
+        const title=document.title
+        if(title=="Home"){
+            document.getElementById('home').style.textDecoration="1.5px underline"
+        }
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
